@@ -47,7 +47,12 @@ public class TreeOfLife extends TreeFrame{
 	
 			 while (sc.hasNextLine()){
 		    		String line = sc.nextLine();
-		    		filelist.add(line);
+
+		    		if (line.contains("\"")) {
+			    		filelist.add(line);				// Only adds line that contains information.
+
+
+		    		}
 				}
     	
     	}
