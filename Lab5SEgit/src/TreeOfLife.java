@@ -42,8 +42,8 @@ public class TreeOfLife extends TreeFrame{
     	filelist = new ArrayList<String>();
 
     	try {
-			// Scanner sc = new Scanner(new File("C:\\Users\\Axel Karlsson\\Documents\\GitHub\\Software_Engineering\\Lab5SEgit\\src\\Life.txt"));
-			 Scanner sc = new Scanner(new File("/Users/Kaj/Documents/GitHub/Software_Engineering/Lab5SEgit/src/Life.txt"));
+			 Scanner sc = new Scanner(new File("C:\\Users\\Axel Karlsson\\Documents\\GitHub\\Software_Engineering\\Lab5SEgit\\src\\Life.txt"));
+			// Scanner sc = new Scanner(new File("/Users/Kaj/Documents/GitHub/Software_Engineering/Lab5SEgit/src/Life.txt"));
 	
 			 while (sc.hasNextLine()){
 		    		String line = sc.nextLine();
