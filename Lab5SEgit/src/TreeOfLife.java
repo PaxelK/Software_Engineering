@@ -50,8 +50,6 @@ public class TreeOfLife extends TreeFrame{
 
 		    		if (line.contains("\"")) {
 			    		filelist.add(line);				// Only adds line that contains information.
-
-
 		    		}
 				}
     	
