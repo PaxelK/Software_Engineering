@@ -6,15 +6,12 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import java.util.*;
-/*
- * 
- * Dra ut ny bransch kasnke? 
- * 
- * Massa text, bla bla 
- * 
- * 
- */
+
 public class TreeOfLife extends TreeFrame{
+	
+	/*
+	 * HEJ KAJ!!!
+	 */
 	
 	ArrayList<treeNode> children;
 	ArrayList<String> filelist;
