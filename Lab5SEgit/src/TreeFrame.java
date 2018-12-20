@@ -70,7 +70,7 @@ class TreeFrame extends JFrame implements ActionListener {
     void showDetails(TreePath path){
 	if (path == null)
 	    return;
-	String info = path.getLastPathComponent().toString();
+	String info = ((treeNode) path.getLastPathComponent()).getDescription();
 	JOptionPane.showMessageDialog(this, info);
     }
 
