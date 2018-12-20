@@ -10,7 +10,7 @@ import java.util.*;
 public class TreeOfLife extends TreeFrame{
 	
 	/*
-	 * HEJ KAJ!!!
+	 * testar branchen
 	 */
 	
 	ArrayList<treeNode> children;
@@ -43,7 +43,7 @@ public class TreeOfLife extends TreeFrame{
 
     	try {
 			// Scanner sc = new Scanner(new File("C:\\Users\\Axel Karlsson\\Documents\\GitHub\\Software_Engineering\\Lab5SEgit\\src\\Life.txt"));
-			 Scanner sc = new Scanner(new File("/Users/Kaj/Documents/GitHub/Software_Engineering/Lab5SEgit/src/Life.txt"));
+			 Scanner sc = new Scanner(new File("/Users/Kaj/eclipse-workspace/Lab5/src/Life.txt"));
 	
 			 while (sc.hasNextLine()){
 		    		String line = sc.nextLine();
@@ -51,6 +51,7 @@ public class TreeOfLife extends TreeFrame{
 				}
     	
     	}
+    	
 		catch (FileNotFoundException sc) {}
     	
     	treeNode currentTopNode;
