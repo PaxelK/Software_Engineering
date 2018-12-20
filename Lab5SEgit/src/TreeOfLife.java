@@ -19,31 +19,17 @@ public class TreeOfLife extends TreeFrame{
     void initTree() {
 		root = new treeNode("Life", "World Tree");
 		treeModel = new DefaultTreeModel( root );
-		/*
-		treeNode plants = new treeNode("Plants");
-		treeNode animals = new treeNode("Animals");
-		treeNode mushrooms = new treeNode("Mushrooms");
-		
-		treeNode flower = new treeNode("Vitsippa");
-		treeNode deer = new treeNode("Kronhjort");
-		treeNode redMush = new treeNode("Flugsvamp");
-		
-		plants.add(flower);
-		animals.add(deer);
-		mushrooms.add(redMush);
-		
-		children.add(plants);
-		children.add(animals);
-		children.add(mushrooms);
-		*/
+
 		children = new ArrayList<treeNode>();
-		tree = new JTree( treeModel );
+		tree = new JTree(treeModel);
 
     	filelist = new ArrayList<String>();
 
     	try {
-			// Scanner sc = new Scanner(new File("C:\\Users\\Axel Karlsson\\Documents\\GitHub\\Software_Engineering\\Lab5SEgit\\src\\Life.txt"));
-			 Scanner sc = new Scanner(new File("/Users/Kaj/eclipse-workspace/Lab5/src/Life.txt"));
+
+			 Scanner sc = new Scanner(new File("C:\\Users\\Axel Karlsson\\Documents\\GitHub\\Software_Engineering\\Lab5SEgit\\src\\Life.txt"));
+			// Scanner sc = new Scanner(new File("/Users/Kaj/Documents/GitHub/Software_Engineering/Lab5SEgit/src/Life.txt"));
+
 	
 			 while (sc.hasNextLine()){
 		    		String line = sc.nextLine();
@@ -82,19 +68,22 @@ public class TreeOfLife extends TreeFrame{
 		
 		//Takes the NAME which is enveloped by "" and creates a node with it.
 		String nodeName = "";
+		String nodeDescr = "";
 		if(line.contains("\"")){
 			String[] infoArr = line.split("\"");
 			nodeName = infoArr[1];
 			
 			//Takes the description
-			String nodeDescr = infoArr[2];
+			nodeDescr = infoArr[2];
+			nodeDescr = nodeDescr.substring(1,nodeDescr.length());
+			//System.out.println(nodeDescr);
 			
 		}
 		
 		
 		
 		
-		treeNode tempNode = new treeNode(nodeName, type);
+		treeNode tempNode = new treeNode(nodeName, type, nodeDescr);
 		
 		if(Parent.getType().equals(type)) {
 			//AVBRYT. D� �R VI L�V
@@ -154,10 +143,18 @@ class treeNode extends DefaultMutableTreeNode{
 		super(object);
 		type=theType;
 	}
+	treeNode(Object object, String theType, String descrip){
+		super(object);
+		type=theType;
+		description = descrip;
+	}
 	public String getType(){
 		return type;
 	}
 	public void setDescription(String descr) {
 		description = descr;
+	}
+	public String getDescription() {
+		return description;
 	}
 }
