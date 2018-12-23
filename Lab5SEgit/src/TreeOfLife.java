@@ -121,6 +121,7 @@ public class TreeOfLife extends TreeFrame{
     }
 }
 
+//branch test
 class treeNode extends DefaultMutableTreeNode{
 	String type;
 	String description;
