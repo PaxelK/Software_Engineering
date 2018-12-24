@@ -46,7 +46,7 @@ class TreeFrame extends JFrame implements ActionListener {
 	tree.setFont(new Font("Dialog", Font.BOLD, 12));
 	controls.add(box);
 	addButton(closeString);
-	controls.setBackground(Color.lightGray);
+	controls.setBackground(Color.DARK_GRAY);
 	controls.setLayout(new FlowLayout());    
 	setSize(400, 400);
     }
@@ -64,6 +64,7 @@ class TreeFrame extends JFrame implements ActionListener {
 	root = new treeNode("TestString");
 	treeModel = new DefaultTreeModel(root);
 	tree = new JTree(treeModel);
+	tree.setBackground(Color.lightGray);
     }
 
     // ***** showDetails can also be overridden in a subclass *****
