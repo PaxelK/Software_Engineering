@@ -1,5 +1,5 @@
 
-public class NumberedItem <T> {
+public class NumberedItem <T> extends Comparable{
 	private T t;
 	private int num;
 	NumberedItem(T k, int number){
@@ -17,4 +17,14 @@ public class NumberedItem <T> {
 			this.num = Num;
 		}
 	}
+	
+	public String toString() {
+		return("Index: " + this.t + "\t" + "Value: " +this.num);
+	}
+
+	
+	public static void main(String[] args) {
+		
+	}
+
 }
