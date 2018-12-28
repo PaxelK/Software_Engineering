@@ -1,5 +1,5 @@
 
-public class NumberedItem <T> extends Comparable{
+public class NumberedItem <T> implements Comparable{
 	private T t;
 	private int num;
 	NumberedItem(T k, int number){
@@ -16,15 +16,16 @@ public class NumberedItem <T> extends Comparable{
 		}
 	}
 	public void setType(T k){this.t = k;}
-	public void getType(T k){return this.t;}
-	public void getNum(T k){return this.num;}
-	
-	public void compareTo(NumberedItem t2) {
-			return(this.T-t2.getType());
-	}
+	public T getType(){return this.t;}
+	public int getNum(T k){return this.num;}
 	
 	public String toString() {
 		return("Index: " + this.t + "\t" + "Value: " +this.num);
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return(((int)this.t)-(int)((NumberedItem) o).getType());
 	}
 
 }
