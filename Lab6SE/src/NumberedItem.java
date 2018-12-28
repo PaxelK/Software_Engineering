@@ -17,4 +17,8 @@ public class NumberedItem <T> {
 			this.num = Num;
 		}
 	}
+	
+	public String toString() {
+		return("Index: " + this.t + "\t" + "Value: " +this.num);
+	}
 }
