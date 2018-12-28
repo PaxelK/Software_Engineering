@@ -18,6 +18,12 @@ public class NumberedItem <T> extends Comparable{
 		}
 	}
 	
+	public void compareTo(NumberedItem t2) {
+		if(this.num < t2.) {
+			
+		}
+	}
+	
 	public String toString() {
 		return("Index: " + this.t + "\t" + "Value: " +this.num);
 	}
