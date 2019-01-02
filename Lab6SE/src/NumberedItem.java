@@ -81,11 +81,6 @@ public class NumberedItem <T> implements Comparable{
                 this.value = value;
         }
 
-        abstract boolean isOperator();
-
-        boolean isOperand() {
-                return !isOperator();
-        }
 	}
 	/*
 	 * Extends the abstract class math-value and takes in an int which it then passes onto the constructor via _super_ which stores it in <T> value.
@@ -96,10 +91,7 @@ public class NumberedItem <T> implements Comparable{
                 super(new Integer(operand));
         }
 
-        @Override
-        public boolean isOperator() {
-                return false;
-        }
+   
 }
 	/*
 	 * Just a bunch of testing done to see how everything works.
