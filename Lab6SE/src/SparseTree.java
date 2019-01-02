@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements SparseVector{
 
-	
+	/*
 	public void add(V v) {
 		if (this.firstEntry()==null || this.firstKey()==1 ) {
 			add(0,v);
@@ -19,7 +19,7 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 
 
 	public void add(K pos, V v) {this.put(pos, v);}
-
+*/
 	public V get(int pos) {return this.get(pos);}
 
 	public int indexOf(V v){
@@ -126,6 +126,38 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 
 
 
+	}
+
+
+	@Override
+	public void add(Object elem) {
+			if (this.firstEntry()==null || this.firstKey()==1 ) {
+				add(0,elem);
+			}
+			else{
+				add((this.firstKey()-1),elem);
+			}
+		}
+
+
+
+	@Override
+	public void add(int pos, Object elem) {
+		this.put(pos, elem);		
+	}
+
+
+	@Override
+	public int indexOf(Object elem) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public void removeElem(Object elem) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
