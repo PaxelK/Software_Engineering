@@ -5,10 +5,10 @@ import java.util.Map;
 
 
 
-public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements SparseVector{
+public class SparseTree <K extends Integer,V> extends TreeMap<Integer,V> implements SparseVector<V>{
 
-	/*
-	public void add(V v) {
+	
+	public void add(V v) {	
 		if (this.firstEntry()==null || this.firstKey()==1 ) {
 			add(0,v);
 		}
@@ -17,15 +17,14 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 		}
 	}
 
+	public void add(int pos, V v) {this.put(pos, v);}
 
-	public void add(K pos, V v) {this.put(pos, v);}
-*/
 	public V get(int pos) {return this.get(pos);}
-
+	
 	public int indexOf(V v){
-		for (K key: this.keySet()) {
+		for (Integer key: this.keySet()) {
 			if(this.get(key).equals(v) || this.get(key) == v){
-				return (int)K;
+				return (int)key;
 			}
 		}
 		return -1;
@@ -35,7 +34,7 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 
 	public void removeElem(V v) {
 		int tempKey = -1;
-		for (K key: this.keySet()) {
+		for (Integer key: this.keySet()) {
 				if(this.get(key).equals(v) || this.get(key) == v){
 					tempKey = (int) key;
 					break;
@@ -67,7 +66,7 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 	}
 	public String toString() {
         StringBuilder builder = new StringBuilder();
-		for (K key: this.keySet()) {
+		for (Integer key: this.keySet()) {
 			builder.append("Element: ").append(key).append("\t").append("Value: ").append(this.get(key)).append("\n");
 		}
 		return builder.toString();
@@ -129,36 +128,8 @@ public class SparseTree <K extends Integer,V> extends TreeMap<K,V> implements Sp
 	}
 
 
-	@Override
-	public void add(Object elem) {
-			if (this.firstEntry()==null || this.firstKey()==1 ) {
-				add(0,elem);
-			}
-			else{
-				add((this.firstKey()-1),elem);
-			}
-		}
 
 
-
-	@Override
-	public void add(int pos, Object elem) {
-		this.put(pos, elem);		
-	}
-
-
-	@Override
-	public int indexOf(Object elem) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-	@Override
-	public void removeElem(Object elem) {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 

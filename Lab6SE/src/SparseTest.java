@@ -3,7 +3,7 @@ import org.junit.Test;
 public class SparseTest {
 	@Test
 	public void testCompare() {
-		Sparse<Integer> i1 = new Sparse<Integer>();
+		SparseTree<Integer, Integer> i1 = new SparseTree<Integer, Integer>();
 		assertTrue(-1 == i1.minIndex());
 		assertTrue(-1 == i1.maxIndex());
 		assertTrue(0== i1.size());
@@ -46,7 +46,7 @@ public class SparseTest {
 
 
 		
-		Sparse<String> i2 = new Sparse<String>();
+		SparseTree<Integer, String> i2 = new SparseTree<Integer, String>();
 		assertEquals(-1 , i2.minIndex());
 		assertEquals(-1 , i2.maxIndex());
 		assertEquals(0, i2.size());
